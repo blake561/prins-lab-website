@@ -200,7 +200,7 @@ nav a.active {
   margin-bottom: 0;
 }
 .thread-tab {
-  padding: 10px 20px;
+  padding: 10px 20px 10px 16px;
   border: 1px solid var(--border);
   border-radius: 24px;
   background: var(--bg);
@@ -210,16 +210,31 @@ nav a.active {
   cursor: pointer;
   transition: all var(--transition);
   font-family: inherit;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
+.thread-tab::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.thread-tab:nth-child(1)::before { background: #2b6cb0; }
+.thread-tab:nth-child(2)::before { background: #c53030; }
+.thread-tab:nth-child(3)::before { background: #d69e2e; }
+.thread-tab:nth-child(4)::before { background: #38a169; }
+.thread-tab:nth-child(5)::before { background: #805ad5; }
 .thread-tab:hover {
-  border-color: var(--accent);
-  color: var(--accent);
-  background: var(--accent-light);
+  border-color: var(--text);
+  color: var(--text);
+  background: var(--bg-alt);
 }
 .thread-tab.active {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: #fff;
+  border-color: var(--text);
+  color: var(--text);
+  background: var(--bg);
   font-weight: 600;
 }
 .thread-detail {
