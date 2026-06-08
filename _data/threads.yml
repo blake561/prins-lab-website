@@ -45,7 +45,7 @@
       role: "PI"
     - name: "Felipe Kazmirczak"
       role: "Postdoc"
-    - name: "Nate Vogel"
+    - name: "Neal Vogel"
       role: "PhD Student"
 
 - id: microtubules
@@ -75,7 +75,7 @@
   people:
     - name: "Kurt Prins"
       role: "PI"
-    - name: "Jake Mendelson"
+    - name: "Jenna Mendelson"
       role: "PhD Student"
     - name: "Ryan Moon"
       role: "PhD Student"
@@ -99,7 +99,7 @@
   people:
     - name: "Kurt Prins"
       role: "PI"
-    - name: "Dimitri Moutsoglou"
+    - name: "Daphne Moutsoglou"
       role: "Collaborator"
     - name: "Madelyn Blake"
       role: "PhD Student"
@@ -131,7 +131,7 @@
   people:
     - name: "Kurt Prins"
       role: "PI"
-    - name: "Jake Mendelson"
+    - name: "Jenna Mendelson"
       role: "PhD Student"
     - name: "Felipe Kazmirczak"
       role: "Postdoc"
