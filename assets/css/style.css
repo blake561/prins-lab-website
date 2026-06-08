@@ -430,59 +430,46 @@ nav a.active {
 .alumni-table tr:hover td { background: var(--bg-alt); }
 
 /* ── Publications ── */
-.pub-year { margin-top: 40px; }
+.pub-year { margin-top: 48px; }
 .pub-year:first-child { margin-top: 0; }
 .pub-year > h3 {
   font-family: 'Lora', Georgia, serif;
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 4px;
-  padding-bottom: 8px;
-  border-bottom: 2px solid var(--border);
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 16px;
+  padding-bottom: 0;
+  border-bottom: none;
 }
 .pub-item {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--border-light);
+  padding: 14px 0;
+  border-bottom: none;
 }
 .pub-item:last-child { border-bottom: none; }
-.pub-item h3 {
+.pub-item .pub-title {
   font-size: 15px;
   font-weight: 600;
-  margin-bottom: 6px;
   line-height: 1.5;
+  margin-bottom: 4px;
+}
+.pub-item .pub-title a {
   color: var(--text);
+  text-decoration: none;
+  transition: color var(--transition);
+}
+.pub-item .pub-title a:hover {
+  color: var(--accent);
 }
 .pub-item .authors {
   font-size: 13px;
   color: var(--text-muted);
   margin-bottom: 2px;
+  line-height: 1.5;
 }
 .pub-item .journal {
   font-size: 13px;
   font-style: italic;
   color: var(--text-light);
-}
-.pub-item .pub-links {
-  margin-top: 10px;
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-.pub-item .pub-links a {
-  padding: 4px 12px;
-  background: var(--accent-light);
-  color: var(--accent);
-  border-radius: 6px;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  transition: all var(--transition);
-}
-.pub-item .pub-links a:hover {
-  background: var(--accent);
-  color: #fff;
-  text-decoration: none;
 }
 
 /* ── Resources ── */
