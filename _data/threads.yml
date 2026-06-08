@@ -49,8 +49,8 @@
       role: "PhD Student"
 
 - id: microtubules
-  title: "Microtubules, JP2 & RV Contractility"
-  summary: "Pathological microtubule remodeling disrupts the mechanical and signaling architecture of cardiomyocytes in the failing right ventricle. Our lab has shown that microtubule depolymerization with colchicine rescues RV function, and that the microtubule-junctophilin-2 axis links T-tubule disruptions to mitochondrial dysfunction. We have also identified GP130 inflammatory signaling as a driver of this process and demonstrated that GP130 antagonism enhances RV function in large-animal models."
+  title: "GP130 Inflammatory Signaling in PAH & RVF"
+  summary: "Glycoprotein 130 (GP130) inflammatory signaling has emerged as a central driver of right ventricular dysfunction in pulmonary hypertension. Our lab has shown that GP130 signaling links pathological microtubule remodeling and junctophilin-2 disruption to mitochondrial dysfunction and impaired RV contractility. We demonstrated that GP130 antagonism rescues RV function in large-animal models and identified sex-specific therapeutic strategies including estradiol-mediated microtubule stabilization."
   papers:
     - title: "GP130 Antagonism Enhances Porcine RV Function"
       authors: "Mendelson JB, Sternbach JD, Kim M, Moon RA, Hartweck LM, Clark SR, et al."
