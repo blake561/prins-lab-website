@@ -473,6 +473,46 @@ nav a.active {
   color: var(--text-light);
 }
 
+/* ── Open Questions ── */
+.questions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+.question-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.question-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+.question-number {
+  display: inline-block;
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  opacity: 0.35;
+  margin-bottom: 12px;
+}
+.question-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 8px;
+  color: var(--text);
+}
+.question-card p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
 /* ── Resources ── */
 .resource-list {
   list-style: none;
