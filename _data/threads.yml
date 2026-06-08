@@ -1,0 +1,57 @@
+- id: thread-1
+  title: "Research Area 1"
+  summary: "Add a paragraph describing this research direction — what questions you're asking, why they matter, and what approaches you use."
+  papers:
+    - title: "Example Paper Title"
+      authors: "Author A, Author B, Prins K"
+      journal: "Journal Name, 2026"
+      url: "#"
+    - title: "Another Paper in This Area"
+      authors: "Author C, Prins K"
+      journal: "Another Journal, 2025"
+      url: "#"
+  people:
+    - name: "Kurt Prins"
+      role: "PI"
+    - name: "Lab Member"
+      role: "PhD Student"
+
+- id: thread-2
+  title: "Research Area 2"
+  summary: "Add a paragraph describing this research direction — what questions you're asking, why they matter, and what approaches you use."
+  papers:
+    - title: "A Publication in This Area"
+      authors: "Prins K, Author D"
+      journal: "Journal Name, 2025"
+      url: "#"
+  people:
+    - name: "Kurt Prins"
+      role: "PI"
+    - name: "Lab Member"
+      role: "Postdoc"
+
+- id: thread-3
+  title: "Research Area 3"
+  summary: "Add a paragraph describing this research direction — what questions you're asking, why they matter, and what approaches you use."
+  papers:
+    - title: "Paper Title Here"
+      authors: "Author E, Prins K"
+      journal: "Journal, 2024"
+      url: "#"
+  people:
+    - name: "Kurt Prins"
+      role: "PI"
+
+- id: thread-4
+  title: "Research Area 4"
+  summary: "Add a paragraph describing this research direction — what questions you're asking, why they matter, and what approaches you use."
+  papers:
+    - title: "Paper Title Here"
+      authors: "Prins K, Author F"
+      journal: "Journal, 2026"
+      url: "#"
+  people:
+    - name: "Kurt Prins"
+      role: "PI"
+    - name: "Lab Member"
+      role: "Research Assistant"
