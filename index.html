@@ -18,7 +18,47 @@ title: Home
   </p>
 </div>
 
-<div class="section-alt" id="research-threads">
+<div class="section-alt">
+  <div class="section-inner">
+    <div class="section-label-inline">Open Questions</div>
+    <span class="section-subtitle">Long-running things we're chasing.</span>
+
+    <div class="questions-grid">
+      <div class="question-card" data-thread="multi-organ" onclick="goToThread('multi-organ')">
+        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
+        <h3>How does right ventricular failure propagate to distant organs?</h3>
+        <span class="question-link">Explore thread →</span>
+      </div>
+      <div class="question-card" data-thread="ferroptosis" onclick="goToThread('ferroptosis')">
+        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
+        <h3>Can ferroptosis inhibition reverse established pulmonary hypertension?</h3>
+        <span class="question-link">Explore thread →</span>
+      </div>
+      <div class="question-card" data-thread="microbiome" onclick="goToThread('microbiome')">
+        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
+        <h3>What role does the gut microbiome play in pulmonary vascular remodeling?</h3>
+        <span class="question-link">Explore thread →</span>
+      </div>
+      <div class="question-card" data-thread="microtubules" onclick="goToThread('microtubules')">
+        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
+        <h3>How do sex differences shape right ventricular adaptation to pressure overload?</h3>
+        <span class="question-link">Explore thread →</span>
+      </div>
+      <div class="question-card" data-thread="rv-metabolism" onclick="goToThread('rv-metabolism')">
+        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
+        <h3>Can metabolic reprogramming be harnessed to rescue the failing right ventricle?</h3>
+        <span class="question-link">Explore thread →</span>
+      </div>
+      <div class="question-card" data-thread="microtubules" onclick="goToThread('microtubules')">
+        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
+        <h3>What are the targetable nodes linking GP130 signaling to mitochondrial dysfunction?</h3>
+        <span class="question-link">Explore thread →</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="research-threads">
   <div class="section-inner">
     <div class="thread-search-wrap">
       <input type="text" id="thread-search" class="thread-search" placeholder="Filter papers, people, topics…" autocomplete="off" oninput="filterContent(this.value)">
@@ -72,46 +112,6 @@ title: Home
   </div>
 </div>
 
-<div class="section">
-  <div class="section-inner">
-    <div class="section-label-inline">Open Questions</div>
-    <span class="section-subtitle">Long-running things we're chasing.</span>
-
-    <div class="questions-grid">
-      <div class="question-card" data-thread="multi-organ" onclick="goToThread('multi-organ')">
-        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
-        <h3>How does right ventricular failure propagate to distant organs?</h3>
-        <span class="question-link">Explore thread →</span>
-      </div>
-      <div class="question-card" data-thread="ferroptosis" onclick="goToThread('ferroptosis')">
-        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
-        <h3>Can ferroptosis inhibition reverse established pulmonary hypertension?</h3>
-        <span class="question-link">Explore thread →</span>
-      </div>
-      <div class="question-card" data-thread="microbiome" onclick="goToThread('microbiome')">
-        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
-        <h3>What role does the gut microbiome play in pulmonary vascular remodeling?</h3>
-        <span class="question-link">Explore thread →</span>
-      </div>
-      <div class="question-card" data-thread="microtubules" onclick="goToThread('microtubules')">
-        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
-        <h3>How do sex differences shape right ventricular adaptation to pressure overload?</h3>
-        <span class="question-link">Explore thread →</span>
-      </div>
-      <div class="question-card" data-thread="rv-metabolism" onclick="goToThread('rv-metabolism')">
-        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
-        <h3>Can metabolic reprogramming be harnessed to rescue the failing right ventricle?</h3>
-        <span class="question-link">Explore thread →</span>
-      </div>
-      <div class="question-card" data-thread="microtubules" onclick="goToThread('microtubules')">
-        <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
-        <h3>What are the targetable nodes linking GP130 signaling to mitochondrial dysfunction?</h3>
-        <span class="question-link">Explore thread →</span>
-      </div>
-    </div>
-  </div>
-</div>
-
 <script>
 function activateThread(id) {
   document.querySelectorAll('.thread-detail').forEach(d => d.classList.remove('active'));
@@ -127,7 +127,6 @@ function showThread(id, btn) {
 }
 
 function goToThread(id) {
-  // clear any active filter so the thread is visible
   var search = document.getElementById('thread-search');
   if (search && search.value) { search.value = ''; filterContent(''); }
   activateThread(id);
@@ -151,14 +150,12 @@ function filterContent(query) {
     }
   });
 
-  // If the active thread got filtered out, activate the first visible one
   if (q && firstVisible && !activeStillVisible) {
     activateThread(firstVisible.dataset.id);
   }
 
   document.getElementById('no-results').style.display = anyVisible ? 'none' : 'block';
 
-  // Filter the Open Questions too
   document.querySelectorAll('.question-card').forEach(function (card) {
     var text = card.textContent.toLowerCase();
     card.style.display = (!q || text.indexOf(q) !== -1) ? '' : 'none';
