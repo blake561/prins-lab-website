@@ -18,19 +18,26 @@ title: Home
   </p>
 </div>
 
-<div class="section-alt">
+<div class="section-alt" id="research-threads">
   <div class="section-inner">
+    <div class="thread-search-wrap">
+      <input type="text" id="thread-search" class="thread-search" placeholder="Filter papers, people, topics…" autocomplete="off" oninput="filterContent(this.value)">
+    </div>
+
     <div class="section-label">What We Study</div>
     <h2>Research Threads</h2>
     <p>Click a thread to explore our research, publications, and people involved.</p>
 
     <div class="thread-tabs">
       {% for thread in site.data.threads %}
-      <button class="thread-tab {% if forloop.first %}active{% endif %}" onclick="showThread('{{ thread.id }}', this)">
+      {% capture thread_search %}{{ thread.title }} {{ thread.summary }}{% for paper in thread.papers %} {{ paper.title }} {{ paper.authors }} {{ paper.journal }}{% endfor %}{% for person in thread.people %} {{ person.name }} {{ person.role }}{% endfor %}{% endcapture %}
+      <button class="thread-tab {% if forloop.first %}active{% endif %}" data-id="{{ thread.id }}" data-search="{{ thread_search | downcase | strip_newlines | escape }}" onclick="showThread('{{ thread.id }}', this)">
         {{ thread.title }}
       </button>
       {% endfor %}
     </div>
+
+    <p class="no-results" id="no-results">No threads match your search.</p>
 
     {% for thread in site.data.threads %}
     <div class="thread-detail {% if forloop.first %}active{% endif %}" id="{{ thread.id }}">
@@ -71,39 +78,90 @@ title: Home
     <span class="section-subtitle">Long-running things we're chasing.</span>
 
     <div class="questions-grid">
-      <div class="question-card">
+      <div class="question-card" data-thread="multi-organ" onclick="goToThread('multi-organ')">
         <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
         <h3>How does right ventricular failure propagate to distant organs?</h3>
+        <span class="question-link">Explore thread →</span>
       </div>
-      <div class="question-card">
+      <div class="question-card" data-thread="ferroptosis" onclick="goToThread('ferroptosis')">
         <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
         <h3>Can ferroptosis inhibition reverse established pulmonary hypertension?</h3>
+        <span class="question-link">Explore thread →</span>
       </div>
-      <div class="question-card">
+      <div class="question-card" data-thread="microbiome" onclick="goToThread('microbiome')">
         <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
         <h3>What role does the gut microbiome play in pulmonary vascular remodeling?</h3>
+        <span class="question-link">Explore thread →</span>
       </div>
-      <div class="question-card">
+      <div class="question-card" data-thread="microtubules" onclick="goToThread('microtubules')">
         <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
         <h3>How do sex differences shape right ventricular adaptation to pressure overload?</h3>
+        <span class="question-link">Explore thread →</span>
       </div>
-      <div class="question-card">
+      <div class="question-card" data-thread="rv-metabolism" onclick="goToThread('rv-metabolism')">
         <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
         <h3>Can metabolic reprogramming be harnessed to rescue the failing right ventricle?</h3>
+        <span class="question-link">Explore thread →</span>
       </div>
-      <div class="question-card">
+      <div class="question-card" data-thread="microtubules" onclick="goToThread('microtubules')">
         <span class="question-status"><span class="status-dot"></span>Open Question · Active</span>
         <h3>What are the targetable nodes linking GP130 signaling to mitochondrial dysfunction?</h3>
+        <span class="question-link">Explore thread →</span>
       </div>
     </div>
   </div>
 </div>
 
 <script>
-function showThread(id, btn) {
+function activateThread(id) {
   document.querySelectorAll('.thread-detail').forEach(d => d.classList.remove('active'));
   document.querySelectorAll('.thread-tab').forEach(t => t.classList.remove('active'));
-  document.getElementById(id).classList.add('active');
-  btn.classList.add('active');
+  var detail = document.getElementById(id);
+  var tab = document.querySelector('.thread-tab[data-id="' + id + '"]');
+  if (detail) detail.classList.add('active');
+  if (tab) tab.classList.add('active');
+}
+
+function showThread(id, btn) {
+  activateThread(id);
+}
+
+function goToThread(id) {
+  // clear any active filter so the thread is visible
+  var search = document.getElementById('thread-search');
+  if (search && search.value) { search.value = ''; filterContent(''); }
+  activateThread(id);
+  document.getElementById('research-threads').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function filterContent(query) {
+  var q = query.trim().toLowerCase();
+  var tabs = document.querySelectorAll('.thread-tab');
+  var firstVisible = null;
+  var anyVisible = false;
+  var activeStillVisible = false;
+
+  tabs.forEach(function (tab) {
+    var match = !q || tab.dataset.search.indexOf(q) !== -1;
+    tab.style.display = match ? '' : 'none';
+    if (match) {
+      anyVisible = true;
+      if (!firstVisible) firstVisible = tab;
+      if (tab.classList.contains('active')) activeStillVisible = true;
+    }
+  });
+
+  // If the active thread got filtered out, activate the first visible one
+  if (q && firstVisible && !activeStillVisible) {
+    activateThread(firstVisible.dataset.id);
+  }
+
+  document.getElementById('no-results').style.display = anyVisible ? 'none' : 'block';
+
+  // Filter the Open Questions too
+  document.querySelectorAll('.question-card').forEach(function (card) {
+    var text = card.textContent.toLowerCase();
+    card.style.display = (!q || text.indexOf(q) !== -1) ? '' : 'none';
+  });
 }
 </script>
