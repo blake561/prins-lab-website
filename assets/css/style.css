@@ -577,95 +577,82 @@ nav a.active {
 }
 
 /* ── Resources ── */
-.dataset-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 28px;
+.paper-data-list {
+  margin-top: 8px;
 }
-.dataset-card {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 24px;
-  transition: all var(--transition);
-}
-.dataset-card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 4px 20px rgba(43,108,176,0.08);
-  transform: translateY(-2px);
-}
-.dataset-accession {
-  margin-bottom: 10px;
-}
-.dataset-accession a {
-  font-size: 13px;
-  font-weight: 600;
-  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
-  color: var(--accent);
-  background: var(--accent-light);
-  padding: 3px 10px;
-  border-radius: 6px;
-  letter-spacing: 0.02em;
-}
-.dataset-card h3 {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text);
-  margin-bottom: 8px;
-  line-height: 1.4;
-}
-.dataset-card > p {
-  font-size: 14px;
-  color: var(--text-light);
-  line-height: 1.65;
-  max-width: none;
-  margin-bottom: 12px;
-}
-.dataset-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-bottom: 10px;
-}
-.dataset-tag {
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: var(--text-muted);
-  background: var(--bg-alt);
-  padding: 3px 10px;
-  border-radius: 12px;
-  border: 1px solid var(--border-light);
-}
-.dataset-paper {
-  font-size: 13px;
-  color: var(--text-muted);
-  max-width: none;
-  margin-bottom: 0;
-}
-@media (max-width: 680px) {
-  .dataset-grid { grid-template-columns: 1fr; }
-}
-.resource-list {
-  list-style: none;
-  margin-top: 24px;
-}
-.resource-list li {
-  padding: 20px 0;
+.paper-data-item {
+  padding: 28px 0;
   border-bottom: 1px solid var(--border-light);
 }
-.resource-list li:last-child { border-bottom: none; }
-.resource-list h3 {
+.paper-data-item:first-child { padding-top: 0; }
+.paper-data-item:last-child { border-bottom: none; }
+.paper-data-header h3 {
   font-size: 16px;
   font-weight: 600;
-  margin-bottom: 6px;
+  line-height: 1.45;
+  margin-bottom: 4px;
 }
-.resource-list p {
-  font-size: 14px;
-  color: var(--text-light);
+.paper-data-header h3 a {
+  color: var(--text);
+  transition: color var(--transition);
+}
+.paper-data-header h3 a:hover {
+  color: var(--accent);
+}
+.paper-data-cite {
+  font-size: 13px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
   max-width: none;
+}
+.paper-data-datasets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.dataset-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 13px;
+  transition: all var(--transition);
+  text-decoration: none;
+}
+.dataset-badge:hover {
+  border-color: var(--accent);
+  box-shadow: 0 2px 8px rgba(43,108,176,0.1);
+  text-decoration: none;
+}
+.dataset-badge-repo {
+  background: var(--accent);
+  color: #fff;
+  font-weight: 600;
+  padding: 6px 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.dataset-badge-id {
+  font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+  font-weight: 600;
+  color: var(--text);
+  padding: 6px 10px;
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+.dataset-badge-desc {
+  color: var(--text-muted);
+  padding: 6px 12px 6px 0;
+  font-size: 12px;
+  border-left: 1px solid var(--border-light);
+  padding-left: 10px;
+}
+@media (max-width: 680px) {
+  .dataset-badge { flex-wrap: wrap; }
+  .dataset-badge-desc { border-left: none; padding-left: 10px; }
 }
 
 /* ── Blog ── */
