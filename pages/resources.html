@@ -14,14 +14,31 @@ permalink: /resources/
 
 <div class="section">
 
+  <div class="filter-bar">
+    <div class="filter-group">
+      <span class="filter-label">Species</span>
+      <button class="filter-btn active" data-filter="species" data-value="all" onclick="filterData(this)">All</button>
+      <button class="filter-btn filter-human" data-filter="species" data-value="human" onclick="filterData(this)">Human</button>
+      <button class="filter-btn filter-porcine" data-filter="species" data-value="porcine" onclick="filterData(this)">Porcine</button>
+      <button class="filter-btn filter-rat" data-filter="species" data-value="rat" onclick="filterData(this)">Rat</button>
+    </div>
+    <div class="filter-group">
+      <span class="filter-label">Data Type</span>
+      <button class="filter-btn active" data-filter="type" data-value="all" onclick="filterData(this)">All</button>
+      <button class="filter-btn" data-filter="type" data-value="snrna-seq" onclick="filterData(this)">snRNA-seq</button>
+      <button class="filter-btn" data-filter="type" data-value="rna-seq" onclick="filterData(this)">RNA-seq</button>
+      <button class="filter-btn" data-filter="type" data-value="proteomics" onclick="filterData(this)">Proteomics</button>
+    </div>
+  </div>
+
   <div class="data-catalog">
 
-    <div class="data-card">
+    <div class="data-card" data-species="human" data-type="snrna-seq">
       <div class="data-card-top">
         <div class="data-card-meta">
-          <span class="meta-chip meta-organism">Human</span>
-          <span class="meta-chip meta-type">snRNA-seq</span>
-          <span class="meta-chip meta-samples">10 samples</span>
+          <span class="meta-chip chip-human">Human</span>
+          <span class="meta-chip chip-snrna">snRNA-seq</span>
+          <span class="meta-chip chip-samples">10 samples</span>
         </div>
         <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE300202" target="_blank" class="data-card-accession">GSE300202</a>
       </div>
@@ -33,12 +50,12 @@ permalink: /resources/
       </div>
     </div>
 
-    <div class="data-card">
+    <div class="data-card" data-species="porcine" data-type="snrna-seq">
       <div class="data-card-top">
         <div class="data-card-meta">
-          <span class="meta-chip meta-organism">Porcine</span>
-          <span class="meta-chip meta-type">snRNA-seq</span>
-          <span class="meta-chip meta-samples">12 samples</span>
+          <span class="meta-chip chip-porcine">Porcine</span>
+          <span class="meta-chip chip-snrna">snRNA-seq</span>
+          <span class="meta-chip chip-samples">12 samples</span>
         </div>
         <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE299927" target="_blank" class="data-card-accession">GSE299927</a>
       </div>
@@ -50,12 +67,12 @@ permalink: /resources/
       </div>
     </div>
 
-    <div class="data-card">
+    <div class="data-card" data-species="porcine" data-type="snrna-seq">
       <div class="data-card-top">
         <div class="data-card-meta">
-          <span class="meta-chip meta-organism">Porcine</span>
-          <span class="meta-chip meta-type">snRNA-seq</span>
-          <span class="meta-chip meta-samples">8 samples</span>
+          <span class="meta-chip chip-porcine">Porcine</span>
+          <span class="meta-chip chip-snrna">snRNA-seq</span>
+          <span class="meta-chip chip-samples">8 samples</span>
         </div>
         <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE291976" target="_blank" class="data-card-accession">GSE291976</a>
       </div>
@@ -67,12 +84,12 @@ permalink: /resources/
       </div>
     </div>
 
-    <div class="data-card">
+    <div class="data-card" data-species="porcine" data-type="snrna-seq">
       <div class="data-card-top">
         <div class="data-card-meta">
-          <span class="meta-chip meta-organism">Porcine</span>
-          <span class="meta-chip meta-type">snRNA-seq</span>
-          <span class="meta-chip meta-samples">12 samples</span>
+          <span class="meta-chip chip-porcine">Porcine</span>
+          <span class="meta-chip chip-snrna">snRNA-seq</span>
+          <span class="meta-chip chip-samples">12 samples</span>
         </div>
         <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE288047" target="_blank" class="data-card-accession">GSE288047</a>
       </div>
@@ -84,12 +101,12 @@ permalink: /resources/
       </div>
     </div>
 
-    <div class="data-card">
+    <div class="data-card" data-species="rat" data-type="rna-seq">
       <div class="data-card-top">
         <div class="data-card-meta">
-          <span class="meta-chip meta-organism">Rat</span>
-          <span class="meta-chip meta-type">RNA-seq</span>
-          <span class="meta-chip meta-samples">12 samples</span>
+          <span class="meta-chip chip-rat">Rat</span>
+          <span class="meta-chip chip-rna">RNA-seq</span>
+          <span class="meta-chip chip-samples">12 samples</span>
         </div>
         <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE277179" target="_blank" class="data-card-accession">GSE277179</a>
       </div>
@@ -101,12 +118,12 @@ permalink: /resources/
       </div>
     </div>
 
-    <div class="data-card">
+    <div class="data-card" data-species="human" data-type="rna-seq">
       <div class="data-card-top">
         <div class="data-card-meta">
-          <span class="meta-chip meta-organism">Human</span>
-          <span class="meta-chip meta-type">RNA-seq</span>
-          <span class="meta-chip meta-samples">8 samples</span>
+          <span class="meta-chip chip-human">Human</span>
+          <span class="meta-chip chip-rna">RNA-seq</span>
+          <span class="meta-chip chip-samples">8 samples</span>
         </div>
         <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE277180" target="_blank" class="data-card-accession">GSE277180</a>
       </div>
@@ -118,12 +135,12 @@ permalink: /resources/
       </div>
     </div>
 
-    <div class="data-card">
+    <div class="data-card" data-species="porcine" data-type="rna-seq">
       <div class="data-card-top">
         <div class="data-card-meta">
-          <span class="meta-chip meta-organism">Porcine</span>
-          <span class="meta-chip meta-type">RNA-seq</span>
-          <span class="meta-chip meta-samples">8 samples</span>
+          <span class="meta-chip chip-porcine">Porcine</span>
+          <span class="meta-chip chip-rna">RNA-seq</span>
+          <span class="meta-chip chip-samples">8 samples</span>
         </div>
         <a href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE224428" target="_blank" class="data-card-accession">GSE224428</a>
       </div>
@@ -135,11 +152,12 @@ permalink: /resources/
       </div>
     </div>
 
-    <div class="data-card">
+    <div class="data-card" data-species="human rat" data-type="proteomics">
       <div class="data-card-top">
         <div class="data-card-meta">
-          <span class="meta-chip meta-organism">Rodent &amp; Human</span>
-          <span class="meta-chip meta-type">Proteomics &amp; Metabolomics</span>
+          <span class="meta-chip chip-human">Human</span>
+          <span class="meta-chip chip-rat">Rodent</span>
+          <span class="meta-chip chip-proteomics">Proteomics &amp; Metabolomics</span>
         </div>
         <a href="https://doi.org/10.5281/zenodo.15832197" target="_blank" class="data-card-accession data-card-accession-alt">Zenodo</a>
       </div>
@@ -151,10 +169,10 @@ permalink: /resources/
       </div>
     </div>
 
-    <div class="data-card">
+    <div class="data-card" data-species="human" data-type="proteomics">
       <div class="data-card-top">
         <div class="data-card-meta">
-          <span class="meta-chip meta-type">Experimental Data</span>
+          <span class="meta-chip chip-proteomics">Experimental Data</span>
         </div>
         <a href="https://doi.org/10.6084/m9.figshare.24877764" target="_blank" class="data-card-accession data-card-accession-fig">Figshare</a>
       </div>
@@ -168,4 +186,32 @@ permalink: /resources/
 
   </div>
 
+  <p class="no-results" id="no-data-results">No datasets match the selected filters.</p>
+
 </div>
+
+<script>
+var activeFilters = { species: 'all', type: 'all' };
+
+function filterData(btn) {
+  var filterKey = btn.dataset.filter;
+  var value = btn.dataset.value;
+  activeFilters[filterKey] = value;
+
+  btn.parentElement.querySelectorAll('.filter-btn').forEach(function(b) {
+    b.classList.remove('active');
+  });
+  btn.classList.add('active');
+
+  var cards = document.querySelectorAll('.data-card');
+  var anyVisible = false;
+  cards.forEach(function(card) {
+    var speciesMatch = activeFilters.species === 'all' || card.dataset.species.indexOf(activeFilters.species) !== -1;
+    var typeMatch = activeFilters.type === 'all' || card.dataset.type === activeFilters.type;
+    var show = speciesMatch && typeMatch;
+    card.style.display = show ? '' : 'none';
+    if (show) anyVisible = true;
+  });
+  document.getElementById('no-data-results').style.display = anyVisible ? 'none' : 'block';
+}
+</script>
