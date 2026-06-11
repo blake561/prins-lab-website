@@ -648,7 +648,7 @@ nav a.active {
 }
 .filter-human.active { background: #2b6cb0; border-color: #2b6cb0; }
 .filter-porcine.active { background: #38a169; border-color: #38a169; }
-.filter-rat.active { background: #c05621; border-color: #c05621; }
+.filter-rodent.active { background: #c05621; border-color: #c05621; }
 .data-catalog {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -696,7 +696,7 @@ nav a.active {
   background: #f0fff4;
   color: #276749;
 }
-.chip-rat {
+.chip-rodent {
   background: #fff5eb;
   color: #c05621;
 }
@@ -908,4 +908,135 @@ a.data-card-paper:hover {
   .thread-tab { padding: 8px 14px; font-size: 13px; }
   .thread-detail { padding: 20px; }
   .thread-columns { grid-template-columns: 1fr; gap: 20px; }
+}
+
+/* ── Back to Top ── */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-light);
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--transition);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+.back-to-top:hover {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+/* ── Publication Stats ── */
+.pub-stats {
+  display: flex;
+  gap: 32px;
+  padding: 20px 24px;
+  background: var(--bg-alt);
+  border-radius: var(--radius);
+  border: 1px solid var(--border-light);
+  margin-bottom: 36px;
+}
+.pub-stat {
+  display: flex;
+  flex-direction: column;
+}
+.pub-stat-number {
+  font-family: 'Lora', Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.2;
+}
+.pub-stat-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ── Google Map ── */
+.map-wrap {
+  margin-top: 28px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.map-wrap iframe {
+  display: block;
+  width: 100%;
+  height: 320px;
+  border: 0;
+}
+
+/* ── Dark Mode ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1923;
+    --bg-alt: #1a2533;
+    --bg-dark: #0a1017;
+    --text: #e8eaef;
+    --text-light: #a0a8b8;
+    --text-muted: #6b7280;
+    --accent: #5b9bd5;
+    --accent-light: rgba(91,155,213,0.15);
+    --accent-hover: #7cb3e0;
+    --border: #2a3544;
+    --border-light: #1e2b3a;
+  }
+  .site-header {
+    background: rgba(15,25,35,0.92);
+  }
+  nav {
+    background: rgba(15,25,35,0.98);
+  }
+  .site-logo { color: var(--text); }
+  .pub-item .pub-title a { color: var(--text); }
+  .data-card-accession { background: var(--accent); }
+  .data-card-accession:hover { background: var(--accent-hover); }
+  .data-card-accession-alt { background: #2b7cb8; }
+  .data-card-accession-fig { background: #9b7be0; }
+  .filter-btn.active {
+    background: var(--text);
+    color: var(--bg);
+  }
+  .filter-human.active { background: #5b9bd5; border-color: #5b9bd5; }
+  .filter-porcine.active { background: #48bb78; border-color: #48bb78; }
+  .filter-rodent.active { background: #dd6b35; border-color: #dd6b35; }
+  .chip-human { background: rgba(91,155,213,0.15); color: #7cb3e0; }
+  .chip-porcine { background: rgba(72,187,120,0.15); color: #68d391; }
+  .chip-rodent { background: rgba(221,107,53,0.15); color: #ed8936; }
+  .chip-snrna { background: rgba(155,123,224,0.15); color: #b794f4; }
+  .chip-rna { background: rgba(245,101,101,0.15); color: #fc8181; }
+  .chip-proteomics { background: rgba(236,201,75,0.15); color: #ecc94b; }
+  .chip-samples { background: var(--bg-alt); color: var(--text-muted); border-color: var(--border); }
+  .person-card img, .person-card svg {
+    border-color: var(--border);
+    background: var(--bg-alt);
+  }
+  .alumni-table th { background: var(--bg-alt); }
+  .back-to-top { box-shadow: 0 4px 16px rgba(0,0,0,0.3); }
+  .hero-gradient {
+    background: linear-gradient(135deg,
+      rgba(10,16,23,0.9) 0%,
+      rgba(43,108,176,0.5) 50%,
+      rgba(10,16,23,0.85) 100%);
+  }
 }

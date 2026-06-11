@@ -1,8 +1,18 @@
 <footer class="site-footer">
-  <p>&copy; {{ site.time | date: '%Y' }} Prins Lab</p>
+  <p>&copy; {{ site.time | date: '%Y' }} Prins Lab · Gazes Cardiac Research Institute · MUSC</p>
   <p>
-    <a href="mailto:">Email</a>
-    <a href="#">Twitter</a>
-    <a href="#">GitHub</a>
+    <a href="mailto:prins@musc.edu">Email</a>
+    <a href="https://x.com/kurt_prins" target="_blank">Twitter</a>
   </p>
 </footer>
+
+<button class="back-to-top" id="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&uarr;</button>
+
+<script>
+(function() {
+  var btn = document.getElementById('back-to-top');
+  window.addEventListener('scroll', function() {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+})();
+</script>
