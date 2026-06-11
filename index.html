@@ -81,6 +81,16 @@ title: Home
 
     {% for thread in site.data.threads %}
     <div class="thread-detail {% if forloop.first %}active{% endif %}" id="{{ thread.id }}">
+      {% if thread.open_questions %}
+      <div class="thread-questions">
+        {% for q in thread.open_questions %}
+        <div class="thread-question-item">
+          <span class="status-dot"></span>
+          <span>{{ q }}</span>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
       <div class="thread-summary">
         <h3>Overview</h3>
         <p>{{ thread.summary }}</p>

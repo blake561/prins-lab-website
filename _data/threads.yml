@@ -1,6 +1,8 @@
 - id: multi-organ
   title: "Multi-Organ Failure in PAH & RVF"
   summary: "Pulmonary arterial hypertension (PAH) is increasingly recognized as a systemic disease. Our lab investigates how PAH-driven right ventricular failure leads to dysfunction in distant organs — particularly the liver. We have shown that PAH induces a metabolic and inflammatory hepatopathy characterized by disrupted branched-chain amino acid metabolism and ferroptosis, and we are working to define targetable pathways that connect cardiopulmonary hemodynamics to end-organ damage."
+  open_questions:
+    - "How does right ventricular failure propagate to distant organs?"
   papers:
     - title: "Pulmonary Arterial Hypertension Induces a Metabolic and Inflammatory Hepatopathy"
       authors: "Blake MJ, Prins SE, Blake JC, Hartweck LM, Mendelson JB, Provencher S, et al."
@@ -27,6 +29,8 @@
 - id: ferroptosis
   title: "Ferroptosis & Inflammation in PH"
   summary: "Ferroptosis — a form of iron-dependent cell death driven by lipid peroxidation — has emerged as a central mechanism linking metabolic derangements and pathological inflammation in pulmonary hypertension. Our lab discovered that ferroptosis promotes PH development and demonstrated that ferroptosis inhibition can rescue RV function in large-animal models, opening new therapeutic avenues."
+  open_questions:
+    - "Can ferroptosis inhibition reverse established pulmonary hypertension?"
   papers:
     - title: "Ferroptosis-Mediated Inflammation Promotes Pulmonary Hypertension"
       authors: "Kazmirczak F, Vogel NT, Prisco SZ, Patterson MT, Annis J, Moon RT, et al."
@@ -51,6 +55,9 @@
 - id: microtubules
   title: "GP130 Inflammatory Signaling in PAH & RVF"
   summary: "Glycoprotein 130 (GP130) inflammatory signaling has emerged as a central driver of right ventricular dysfunction in pulmonary hypertension. Our lab has shown that GP130 signaling links pathological microtubule remodeling and junctophilin-2 disruption to mitochondrial dysfunction and impaired RV contractility. We demonstrated that GP130 antagonism rescues RV function in large-animal models and identified sex-specific therapeutic strategies including estradiol-mediated microtubule stabilization."
+  open_questions:
+    - "How do sex differences shape right ventricular adaptation to pressure overload?"
+    - "What are the targetable nodes linking GP130 signaling to mitochondrial dysfunction?"
   papers:
     - title: "GP130 Antagonism Enhances Porcine RV Function"
       authors: "Mendelson JB, Sternbach JD, Kim M, Moon RA, Hartweck LM, Clark SR, et al."
@@ -83,6 +90,8 @@
 - id: microbiome
   title: "Gut Microbiome in PAH"
   summary: "Emerging evidence points to gut dysbiosis as a contributor to pulmonary vascular disease and right ventricular dysfunction. Our lab was among the first to characterize the proinflammatory gut microbiome and altered circulating microbial metabolites in PAH patients. We have shown that Lactobacillus restructures the micro- and mycobiome to combat inflammation-mediated RV dysfunction, and demonstrated that microbiota transplant therapy is safe and feasible in PAH."
+  open_questions:
+    - "What role does the gut microbiome play in pulmonary vascular remodeling?"
   papers:
     - title: "Lactobacillus Restructures the Micro/Mycobiome to Combat Inflammation-Mediated RV Dysfunction in PAH"
       authors: "Prisco SZ, Blake M, Kazmirczak F, Moon R, Kremer BP, Hartweck LM, et al."
@@ -109,6 +118,8 @@
 - id: rv-metabolism
   title: "RV Metabolic Reprogramming"
   summary: "The failing right ventricle undergoes profound metabolic reprogramming. Our lab uses multi-omic approaches — proteomics, metabolomics, and transcriptomics — to define the metabolic landscape of RV dysfunction across species. We have shown that intermittent fasting and AMPK activation can restructure RV lipid metabolism and microtubules, and identified novel targets like WNK1 and O-GlcNAcylation that drive metabolic derangements in PAH."
+  open_questions:
+    - "Can metabolic reprogramming be harnessed to rescue the failing right ventricle?"
   papers:
     - title: "Multi-Omic and Multispecies Analysis of Right Ventricular Dysfunction"
       authors: "Mendelson JB, Sternbach JD, Doyle MJ, Mills L, Hartweck LM, Tollison W, et al."

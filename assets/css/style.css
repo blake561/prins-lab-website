@@ -278,6 +278,29 @@ nav a.active {
   from { opacity: 0; transform: translateY(8px); }
   to { opacity: 1; transform: translateY(0); }
 }
+.thread-questions {
+  background: var(--bg-alt);
+  border-radius: 8px;
+  padding: 16px 20px;
+  margin-bottom: 20px;
+  border-left: 3px solid #22c55e;
+}
+.thread-question-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text);
+  line-height: 1.5;
+}
+.thread-question-item + .thread-question-item {
+  margin-top: 10px;
+}
+.thread-question-item .status-dot {
+  margin-top: 6px;
+  flex-shrink: 0;
+}
 .thread-summary h3 {
   font-family: 'Lora', Georgia, serif;
   font-size: 18px;
