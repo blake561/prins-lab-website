@@ -22,7 +22,7 @@
     - name: "Kurt Prins"
       role: "PI"
     - name: "Madelyn Blake"
-      role: "PhD Student"
+      role: "Postbac"
 
 - id: ferroptosis
   title: "Ferroptosis & Inflammation in PH"
@@ -44,9 +44,9 @@
     - name: "Kurt Prins"
       role: "PI"
     - name: "Felipe Kazmirczak"
-      role: "Postdoc"
+      role: "Collaborator"
     - name: "Neal Vogel"
-      role: "PhD Student"
+      role: "Researcher"
 
 - id: microtubules
   title: "GP130 Inflammatory Signaling in PAH & RVF"
@@ -78,7 +78,7 @@
     - name: "Jenna Mendelson"
       role: "PhD Student"
     - name: "Ryan Moon"
-      role: "PhD Student"
+      role: "MD Student"
 
 - id: microbiome
   title: "Gut Microbiome in PAH"
@@ -102,7 +102,7 @@
     - name: "Daphne Moutsoglou"
       role: "Collaborator"
     - name: "Madelyn Blake"
-      role: "PhD Student"
+      role: "Postbac"
 
 - id: rv-metabolism
   title: "RV Metabolic Reprogramming"
@@ -134,4 +134,4 @@
     - name: "Jenna Mendelson"
       role: "PhD Student"
     - name: "Felipe Kazmirczak"
-      role: "Postdoc"
+      role: "Collaborator"
